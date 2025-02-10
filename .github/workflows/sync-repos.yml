@@ -1,0 +1,28 @@
+name: Sync Repositories
+
+on:
+  push:
+    branches:
+      - main
+  create:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Source Repository
+        run: |
+          git clone --mirror https://github.com/hitokoto-osc/sentences-bundle.git source-repo
+
+      - name: Add Destination Remote
+        run: |
+          cd source-repo
+          git remote add destination "https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/qzgeek/sentences-bundle.git"
+
+      - name: Push to Destination
+        run: |
+          cd source-repo
+          git push destination --all
+          git push destination --tags
