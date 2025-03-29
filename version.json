@@ -1,10 +1,10 @@
 {
   "protocol_version": "1.0.0",
   "bundle_version": "1.0.399",
-  "updated_at": 1735113819845,
+  "updated_at": 1743265180677,
   "categories": {
     "path": "./categories.json",
-    "timestamp": 1597712000881
+    "timestamp": 1743265180677
   },
   "sentences": [
     {
@@ -78,6 +78,12 @@
       "key": "l",
       "path": "./sentences/l.json",
       "timestamp": 1619024460771
+    },
+    {
+      "name": "彼岸幻梦",
+      "key": "m",
+      "path": "./sentences/m.json",
+      "timestamp": 1743265180677
     }
   ]
 }
